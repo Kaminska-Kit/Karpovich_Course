@@ -5,7 +5,7 @@
 //   3. Создать переменную “age_3” и присвоить ей значение 60
 
 
-let age = 10;
+let age_1 = 10;
 let age_2 = 18;
 let age_3 = 60;
 
@@ -16,11 +16,11 @@ let age_3 = 60;
 //     Если “age”  > age_3, вывести в консоль “Keep calm and look Culture channel”.
 //     Иначе выводите “Technical work”.
 
-if (age < age_2) {
-    console.log('You don’t have access cause your age is ' + age + ' It’s less then ' + age_2);
-} else if (age >= age_2 && age < age_3) {
+if (age_1 < age_2) {
+    console.log('You don’t have access cause your age is ' + age_1 + ' It’s less then ' + age_2);
+} else if (age_1 >= age_2 && age_1 < age_3) {
     console.log('Welcome!');
-} else if (age >= age_3) {
+} else if (age_1 >= age_3) {
     console.log('Keep calm and look Culture channel');
 } else {
     console.log('Technical work'); 
@@ -34,7 +34,7 @@ const checkAge = function (age) {
     if (typeof age != "number") {
         console.error('Not a number');
     } else if (age < age_2) {
-        console.log(`You don’t have access cause your age is ${age} It’s less then 18`);
+        console.log(`You don’t have access cause your age is ${age}. It’s less then ${age_2} :(`);
     } else if (age >= age_2 && age < age_3) {
         console.log('Welcome!');
     } else if (age >= age_3) {
@@ -59,7 +59,7 @@ const checkAge2 = function (age) {
 
     if (age.trim() !== "" && !isNaN(age)) {
         if (age < age_2) {
-            console.log(`You don’t have access cause your age is ${age} It’s less then 18`);
+            console.log(`You don’t have access cause your age is ${age}. It’s less then ${age_2} :(`);
         } else if (age >= age_2 && age < age_3) {
             console.log('Welcome!');
         } else if (age >= age_3) {
