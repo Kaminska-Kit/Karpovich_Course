@@ -45,7 +45,6 @@ const getNumber = function() {
         let randomNum = Math.floor(Math.random() * 11);
         if (randomNum > 5){
             resolve(randomNum);
-            console.log('First attempt')
         } else {
             reject('Number <= 5');
         };
