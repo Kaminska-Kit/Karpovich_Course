@@ -87,6 +87,24 @@ console.log(typifiedArray(myArray));
 //   Затипизируйте так, чтобы функция принимала только строковые входные данные и чтобы выходной объект имел строковые ключи 
 //   (представляющие каждую букву) и числовые значения (представляющие количество этой буквы).
 
+type CustomObject = {
+      [key: string]: number 
+    };
+
+function countLetters(str: string) {
+    const resultObject: CustomObject = {};
+    const arrayOfLetters: string[] = str.toLowerCase().split('');
+    const result: number[] = arrayOfLetters.map((char, index, arr) => {
+        return arr.filter((el) => el == char).length;
+    });
+    arrayOfLetters.forEach((letter, index) => {
+         resultObject[`${letter}`] = result[index]
+    });
+    return resultObject;
+};
+console.log(countLetters('pepper'))
+console.log(countLetters('ginger'))
+
 // 4.  Реализуйте функцию filter(), которая принимает на вход массив чисел и предикат, 
 //     который будет использоваться для проверки каждого числа на соответствие требованиям. 
 //     Помимо самой функции следует реализовать алиасы типов для функций и аттрибутов. 
