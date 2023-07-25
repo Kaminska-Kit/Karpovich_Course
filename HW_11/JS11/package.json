@@ -1,0 +1,29 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "Homework 11 TS",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "console": "npm run build & node dist/functions/createUser.function.js",
+    "test": "npx mocha dist/**/**/*test.js",
+    "build": "tsc",
+    "pretest": "npm run build"
+  },
+  "keywords": [
+    "ts",
+    "js",
+    "qa"
+  ],
+  "author": "Tatiana",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
